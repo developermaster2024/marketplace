@@ -35,8 +35,8 @@ export class IrRule {
 
   //------------------------------------------------------------
   //Muchos a Uno ResGroups
-  @ManyToOne(() => ResGroups, (group) => group.IrModelAccessGroupsRel)
-  @JoinColumn({ name: 'group_id' })
+  @ManyToOne(() => ResGroups, (group) => group.IrRule)
+  @JoinColumn({ name: 'groups' })
   public group: ResGroups;
   //------------------------------------------------------------
 

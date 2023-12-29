@@ -222,7 +222,7 @@ export class ResPartner {
   @JoinColumn({ name: 'company_id' })
   public companys: ResCompany;
 
-  //Muchos a Uno ResCompany
+  //Muchos a Uno Respartner
   @ManyToOne(() => ResCountry, (country) => country.partner)
   @JoinColumn({ name: 'country_id' })
   public country: ResCountry;
