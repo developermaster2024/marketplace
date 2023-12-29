@@ -13,8 +13,7 @@ import { LiaIndustrySolid } from "react-icons/lia";
 import { useRouter } from "next/router";
 
 const Index = () => {
-  const router = useRouter(); // Inicializa useRouter
-
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -26,20 +25,17 @@ const Index = () => {
   };
 
   const redirectToUserPage = () => {
-    router.push("/UsersModule/UserProcess/UsersRegister/userscreate"); // Redirige a la página de usuario al hacer clic en Usuario
+    router.push("/UsersModule/UserProcess/UsersRegister/userslogin");
   };
 
   const redirectToCompanyPage = () => {
-    router.push("/UsersModule/UserProcess/CompanyRegister/companyregister"); // Redirige a la página de compañía al hacer clic en Compañía
+    router.push("/UsersModule/UserProcess/CompanyRegister/companylogin");
   };
 
   return (
     <Flex justifyContent="center">
-      <Button colorScheme="blue" mr="4">
-        Login
-      </Button>
       <Button colorScheme="blue" onClick={openModal}>
-        Register
+        Ingresar
       </Button>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ModalOverlay />

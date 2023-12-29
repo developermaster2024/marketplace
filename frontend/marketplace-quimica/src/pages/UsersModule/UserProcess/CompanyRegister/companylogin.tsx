@@ -10,19 +10,19 @@ import {
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const userslogin = () => {
+const companylogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
   const router = useRouter();
   const redirectToUserPage = () => {
-    router.push("/UsersModule/UserProcess/UsersRegister/userscreate");
+    router.push("/UsersModule/UserProcess/CompanyRegister/companyregister");
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (email === "admin@admin.com" && password === "123456") {
+    if (email === "company@company.com" && password === "123456") {
       toast({
         title: "Login successful",
         description: "Welcome back!",
@@ -75,4 +75,4 @@ const userslogin = () => {
   );
 };
 
-export default userslogin;
+export default companylogin;

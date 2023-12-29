@@ -7,7 +7,17 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
+import CustomButton from "../Constants/CustomButton";
+import { useRouter } from "next/router";
+
 const UserForm = () => {
+  const router = useRouter();
+  const redirectToUserPage = () => {
+    router.push("/");
+  };
+  const redirectToUserPage2 = () => {
+    router.push("/");
+  };
   return (
     <div>
       <Box bg="white" p={4} borderRadius="md" shadow="md">
@@ -23,28 +33,48 @@ const UserForm = () => {
           <GridItem>
             <FormControl isRequired>
               <FormLabel fontSize="sm" fontWeight="bold">
-                Last name
+                Street
               </FormLabel>
-              <Input placeholder="Last name" size="sm" />
+              <Input placeholder="Street" size="sm" />
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
               <FormLabel fontSize="sm" fontWeight="bold">
-                Email
+                Street 2
               </FormLabel>
-              <Input placeholder="Email" size="sm" type="email" />
+              <Input placeholder="Street 2" size="sm" type="email" />
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
               <FormLabel fontSize="sm" fontWeight="bold">
-                Phone number
+                City
               </FormLabel>
-              <Input placeholder="Phone number" size="sm" type="tel" />
+              <Input placeholder="City" size="sm" type="tel" />
+            </FormControl>
+          </GridItem>
+          <GridItem>
+            <FormControl isRequired>
+              <FormLabel fontSize="sm" fontWeight="bold">
+                State
+              </FormLabel>
+              <Input placeholder="State" size="sm" type="tel" />
+            </FormControl>
+          </GridItem>
+          <GridItem>
+            <FormControl isRequired>
+              <FormLabel fontSize="sm" fontWeight="bold">
+                Country
+              </FormLabel>
+              <Input placeholder="Country" size="sm" type="tel" />
             </FormControl>
           </GridItem>
         </Grid>
+        <div className="flex justify-end space-x-5 mt-10">
+          <CustomButton title={"GUARDAR"} onClick={redirectToUserPage} />
+          <CustomButton title={"VOLVER"} onClick={redirectToUserPage2} />
+        </div>
       </Box>
     </div>
   );
