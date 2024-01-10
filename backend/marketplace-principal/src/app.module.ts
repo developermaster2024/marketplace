@@ -20,6 +20,7 @@ import { IrRuleModule } from './Module-User/ir-rule/ir-rule.module';
 import { ResGroupsImpliedIdsModule } from './Module-User/res-groups-implied-ids/res-groups-implied-ids.module';
 import { ResGroupsRulesModule } from './Module-User/res-groups-rules/res-groups-rules.module';
 import { ResUsersSettingsVolumesModule } from './Module-User/res-users-settings-volumens/res-users-settings-volumens.module';
+import { AuthModule } from './Module-User/Functionalities/auth/auth.module';
 
 @Module({
   imports: [
@@ -56,6 +57,7 @@ import { ResUsersSettingsVolumesModule } from './Module-User/res-users-settings-
     ResGroupsRulesModule,
     ResUsersSettingsVolumesModule,
     ResUsersLogModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

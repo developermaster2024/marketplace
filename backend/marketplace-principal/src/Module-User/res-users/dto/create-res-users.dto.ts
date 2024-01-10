@@ -3,7 +3,7 @@ import { Exclude, Expose } from 'class-transformer';
 @Exclude()
 export class CreateResUsersDto {
   @Expose()
-  public readonly id: number;
+  public readonly id?: number;
 
   @Expose()
   public readonly name: string;
@@ -18,65 +18,65 @@ export class CreateResUsersDto {
   public readonly email: string;
 
   @Expose()
-  public readonly company_id: number;
+  public readonly company_id?: number;
 
   @Expose()
-  public readonly partner_id: number;
+  public readonly partner_id?: number;
 
   @Expose()
-  public readonly active: boolean;
+  public readonly active?: boolean;
 
   @Expose()
-  public readonly action_id: number;
+  public readonly action_id?: number;
 
   @Expose()
-  public readonly create_uid: number;
+  public readonly create_uid?: number;
 
   @Expose()
-  public readonly write_uid: number;
+  public readonly write_uid?: number;
 
   @Expose()
-  public readonly signature: string;
+  public readonly signature?: string;
 
   @Expose()
-  public readonly share: boolean;
+  public readonly share?: boolean;
 
   @Expose()
-  public readonly write_date: number;
+  public readonly write_date?: number;
 
   @Expose()
-  public readonly totp_secret: string;
+  public readonly totp_secret?: string;
 
   @Expose()
-  public readonly notification_type: string;
+  public readonly notification_type?: string;
 
   @Expose()
-  public readonly odoobot_state: string;
+  public readonly odoobot_state?: string;
 
   @Expose()
-  public readonly odoobot_failed: boolean;
+  public readonly odoobot_failed?: boolean;
 
   @Expose()
-  public readonly sale_team_id: number;
+  public readonly sale_team_id?: number;
 
   @Expose()
-  public readonly target_sales_won: number;
+  public readonly target_sales_won?: number;
 
   @Expose()
-  public readonly target_sales_done: number;
+  public readonly target_sales_done?: number;
 
   @Expose()
-  public readonly karma: number;
+  public readonly karma?: number;
 
   @Expose()
-  public readonly rank_id: number;
+  public readonly rank_id?: number;
 
   @Expose()
-  public readonly next_rank_id: number;
+  public readonly next_rank_id?: number;
 
   @Expose()
-  public readonly target_sales_invoiced: number;
+  public readonly target_sales_invoiced?: number;
 
   @Expose()
-  public readonly grupo: number[];
+  public readonly grupo?: number[];
 }
