@@ -35,7 +35,7 @@ export class AuthController {
   }
 
   @Get('profile')
-  @Auth(Role.USUARIO)
+  // @Auth(Role.USUARIO)
   profile(@Req() req: RequestWithUser) {
     console.log(req.user);
     return this.authService.profile(req.user);

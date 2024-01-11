@@ -59,7 +59,7 @@ export class AuthService {
       throw new UnauthorizedException('password is wrong');
     }
     const { password: userPassword, ...restOfUser } = user;
-    const payload = { email: user.email, role: user.role, id: user.id };
+    const payload = { email: user.email, id: user.id };
 
     //valida si el usuario esta aprovado o no
     // if (!user.status_approved) {
