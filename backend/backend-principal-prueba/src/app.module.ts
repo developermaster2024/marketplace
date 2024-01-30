@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreacionDeUsuarioModule } from './Module-User/module/proceso/model/res_users/CreacionDeUsuario.module';
+import { CreacionDeCompanyModule } from './Module-User/module/proceso/model/res_company/CreacionDeCompania.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { CreacionDeUsuarioModule } from './Module-User/module/proceso/model/res_
       logging: false,
     }),
     CreacionDeUsuarioModule,
+    CreacionDeCompanyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
